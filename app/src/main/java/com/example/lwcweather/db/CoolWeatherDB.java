@@ -25,7 +25,7 @@ public class CoolWeatherDB {
     /*获取实例方法加锁*/
     public synchronized static CoolWeatherDB getInstance(Context context) {
         if (coolWeatherDB == null) {
-            coolWeatherDB = new CoolWeatherDB(context);
+            coolWeatherDB = new CoolWeatherDB(context);///?????
         }
         return coolWeatherDB;
     }
