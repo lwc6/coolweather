@@ -10,9 +10,11 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.lwcweather.R;
+import com.example.lwcweather.service.AutoUpdateService;
 import com.example.lwcweather.util.HttpCallbackListener;
 import com.example.lwcweather.util.HttpUtil;
 import com.example.lwcweather.util.Utility;
@@ -27,7 +29,7 @@ public class WeatherActivity extends Activity  implements View.OnClickListener {
     private TextView currentDateText;
     private Button switchCity;
     private Button refreshWeather;
-
+    private RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,8 @@ public class WeatherActivity extends Activity  implements View.OnClickListener {
         setContentView(R.layout.weather_layout);
 // 初始化各控件
         weatherInfoLayout = (LinearLayout) findViewById(R.id.weather_info_layout);
+        relativeLayout=(RelativeLayout) findViewById(R.id.back_k);
+        relativeLayout.getBackground().setAlpha(100);
         cityNameText = (TextView) findViewById(R.id.city_name);
         publishText = (TextView) findViewById(R.id.publish_text);
         weatherDespText = (TextView) findViewById(R.id.weather_desp);
@@ -65,6 +69,8 @@ public class WeatherActivity extends Activity  implements View.OnClickListener {
                 intent.putExtra("from_weather_activity", true);
                 startActivity(intent);
                 finish();
+
+
                 break;
             case R.id.refresh_weather:
                 publishText.setText("同步中...");
@@ -133,6 +139,8 @@ public class WeatherActivity extends Activity  implements View.OnClickListener {
         currentDateText.setText(prefs.getString("current_date", ""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
 }
