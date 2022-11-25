@@ -47,56 +47,199 @@
             android:layout_marginTop="10dp"
             android:textColor="#FFF"
             android:textSize="18sp" />
+
         <LinearLayout
             android:id="@+id/weather_info_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="283dp"
+            android:layout_height="187dp"
+
+
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/weather_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFF"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="~"
+                    android:textColor="#FFF"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/temp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFF"
+                    android:textSize="40sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical" >
-        <TextView
-            android:id="@+id/current_date"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:textColor="#FFF"
-            android:textSize="18sp" />
-        <TextView
-            android:id="@+id/weather_desp"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:textColor="#FFF"
-            android:textSize="40sp" />
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="30sp"
+                android:textColor="#FFF"></TextView>
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal" >
-        <TextView
-            android:id="@+id/temp1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="#FFF"
-            android:textSize="40sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="~"
-            android:textColor="#FFF"
-            android:textSize="40sp" />
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true">
+
             <TextView
-                android:id="@+id/temp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:text="今天"
                 android:textColor="#FFF"
-                android:textSize="40sp" />
+                />
+            <TextView
+                android:id="@+id/jtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textColor="#FFF"
+                android:layout_marginBottom="20sp"/>
+            <TextView
+                android:id="@+id/jtemp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textColor="#FFF"
+                android:layout_marginBottom="20sp"/>
+
+            <TextView
+                android:id="@+id/jtemp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textColor="#FFF"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="160sp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:text="明天"
+                android:textColor="#FFF"
+                />
+            <TextView
+                android:id="@+id/mtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textColor="#FFF"
+                android:layout_marginBottom="20sp"/>
+            <TextView
+                android:id="@+id/mtemp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textColor="#FFF"
+                android:layout_marginBottom="20sp"/>
+
+            <TextView
+                android:id="@+id/mtemp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="30sp"
+                android:textColor="#FFF"/>
         </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="30sp"
+                    android:text="后天"
+                    android:textColor="#FFF"
+                    />
+                <TextView
+                    android:id="@+id/htype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="30sp"
+                    android:textColor="#FFF"
+                    android:layout_marginBottom="20sp"/>
+                <TextView
+                    android:id="@+id/htemp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="30sp"
+                    android:textColor="#FFF"
+                    android:layout_marginBottom="20sp"/>
+
+                <TextView
+                    android:id="@+id/htemp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="30sp"
+                    android:textColor="#FFF"/>
+            </LinearLayout>
+        </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
