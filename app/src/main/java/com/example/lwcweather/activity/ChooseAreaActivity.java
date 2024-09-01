@@ -29,7 +29,7 @@ import java.util.List;
 public class ChooseAreaActivity extends Activity {
     public static final int LEVEL_PROVINCE = 0;
     public static final int LEVEL_CITY = 1;
-    public static final int LEVEL_COUNTY = 2;
+    public static final int LEVEL_COUNTY = 3;
     private ProgressDialog progressDialog;
     private TextView titleText;
     private ListView listView;
